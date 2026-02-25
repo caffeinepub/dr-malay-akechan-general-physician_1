@@ -1,0 +1,51 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-implement-universal-hover-to-edit-capability-directly-within-the-admin-panel-dashboard-pages-when-viewing-the-admindashboard-frontend-src-pages-admindashboard-tsx-and-its-editor-sub-components-every-displayed-content-field-value-text-labels-image-thumbnails-list-item-rows-must-show-an-inline-pencil-edit-icon-on-hover-clicking-the-icon-opens-an-inline-input-or-a-small-popover-modal-to-edit-that-specific-field-in-place-then-saves-the-change-directly-to-the-backend-without-requiring-the-admin-to-navigate-to-a-separate-editor-form-this-must-cover-all-editor-panels-heroeditor-abouteditor-serviceseditor-reviewseditor-clinicseditor-sociallinkseditor-and-footereditor-existing-full-form-editors-must-remain-available-but-the-hover-to-edit-shortcut-must-also-work",
+      "featureTitle": "Implement universal hover-to-edit capability directly within the admin panel dashboard pages. When viewing the AdminDashboard (frontend/src/pages/AdminDashboard.tsx) and its editor sub-components, every displayed content field value (text labels, image thumbnails, list item rows) must show an inline pencil/edit icon on hover. Clicking the icon opens an inline input or a small popover/modal to edit that specific field in-place, then saves the change directly to the backend without requiring the admin to navigate to a separate editor form. This must cover all editor panels: HeroEditor, AboutEditor, ServicesEditor, ReviewsEditor, ClinicsEditor, SocialLinksEditor, and FooterEditor. Existing full-form editors must remain available but the hover-to-edit shortcut must also work.",
+      "files": [
+        "frontend/src/components/admin/AboutEditor.tsx",
+        "frontend/src/components/admin/ClinicsEditor.tsx",
+        "frontend/src/components/admin/FooterEditor.tsx",
+        "frontend/src/components/admin/HeroEditor.tsx",
+        "frontend/src/components/admin/ReviewsEditor.tsx",
+        "frontend/src/components/admin/ServicesEditor.tsx",
+        "frontend/src/components/admin/SocialLinksEditor.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-26"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-redesign-the-footer-component-frontend-src-components-footer-tsx-and-footereditor-frontend-src-components-admin-footereditor-tsx-to-be-detailed-and-advanced-the-public-footer-must-include-1-a-branded-top-section-with-the-practice-name-tagline-and-a-short-description-2-a-multi-column-layout-with-columns-for-quick-links-smooth-scrolling-to-each-page-section-contact-info-email-phone-address-with-icons-opening-hours-editable-text-and-a-social-links-column-rendering-platform-icons-linking-to-the-follow-us-social-entries-3-a-bottom-bar-with-copyright-text-a-separator-and-a-back-to-top-button-the-footereditor-in-the-admin-dashboard-must-expose-editable-fields-for-all-footer-content-including-practice-name-tagline-short-description-copyright-text-contact-email-phone-address-and-an-opening-hours-text-block-all-fields-must-save-to-the-backend-the-footer-must-use-the-existing-glassmorphism-card-aesthetic-blue-purple-magenta-palette-dark-light-mode-css-custom-properties-and-helvetica-font",
+      "featureTitle": "Redesign the Footer component (frontend/src/components/Footer.tsx) and FooterEditor (frontend/src/components/admin/FooterEditor.tsx) to be detailed and advanced. The public footer must include: (1) a branded top section with the practice name, tagline, and a short description; (2) a multi-column layout with columns for Quick Links (smooth-scrolling to each page section), Contact Info (email, phone, address with icons), Opening Hours (editable text), and a Social Links column rendering platform icons linking to the Follow Us social entries; (3) a bottom bar with copyright text, a separator, and a 'Back to Top' button. The FooterEditor in the admin dashboard must expose editable fields for all footer content including practice name, tagline, short description, copyright text, contact email, phone, address, and an opening hours text block. All fields must save to the backend. The footer must use the existing glassmorphism card aesthetic, blue-purple-magenta palette, dark/light mode CSS custom properties, and Helvetica font.",
+      "files": [
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/admin/FooterEditor.tsx",
+        "frontend/src/pages/Home.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-27"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

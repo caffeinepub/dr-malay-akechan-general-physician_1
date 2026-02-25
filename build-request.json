@@ -1,0 +1,69 @@
+{
+  "kind": "build_request",
+  "title": "Admin Hover-to-Edit & Advanced Footer Section",
+  "projectName": "Dr. Malay Akechan",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-26",
+      "text": "Implement universal hover-to-edit capability directly within the admin panel dashboard pages. When viewing the AdminDashboard (frontend/src/pages/AdminDashboard.tsx) and its editor sub-components, every displayed content field value (text labels, image thumbnails, list item rows) must show an inline pencil/edit icon on hover. Clicking the icon opens an inline input or a small popover/modal to edit that specific field in-place, then saves the change directly to the backend without requiring the admin to navigate to a separate editor form. This must cover all editor panels: HeroEditor, AboutEditor, ServicesEditor, ReviewsEditor, ClinicsEditor, SocialLinksEditor, and FooterEditor. Existing full-form editors must remain available but the hover-to-edit shortcut must also work.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Make admin hover to edit capable."
+        ]
+      },
+      "acceptanceCriteria": [
+        "In every editor panel (HeroEditor, AboutEditor, ServicesEditor, ReviewsEditor, ClinicsEditor, SocialLinksEditor, FooterEditor), hovering over any displayed field value shows a pencil/edit icon.",
+        "Clicking the pencil icon opens an inline input field or small modal pre-filled with the current value.",
+        "Saving the inline edit calls the appropriate backend mutation and updates the displayed value without a full page reload.",
+        "The existing full-form editor UI remains functional alongside the hover-to-edit shortcut.",
+        "The hover-to-edit UI uses the existing glassmorphism aesthetic, blue-purple-magenta palette, and Helvetica font.",
+        "The feature works correctly in both light and dark modes."
+      ]
+    },
+    {
+      "id": "REQ-27",
+      "text": "Redesign the Footer component (frontend/src/components/Footer.tsx) and FooterEditor (frontend/src/components/admin/FooterEditor.tsx) to be detailed and advanced. The public footer must include: (1) a branded top section with the practice name, tagline, and a short description; (2) a multi-column layout with columns for Quick Links (smooth-scrolling to each page section), Contact Info (email, phone, address with icons), Opening Hours (editable text), and a Social Links column rendering platform icons linking to the Follow Us social entries; (3) a bottom bar with copyright text, a separator, and a 'Back to Top' button. The FooterEditor in the admin dashboard must expose editable fields for all footer content including practice name, tagline, short description, copyright text, contact email, phone, address, and an opening hours text block. All fields must save to the backend. The footer must use the existing glassmorphism card aesthetic, blue-purple-magenta palette, dark/light mode CSS custom properties, and Helvetica font.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Make the footer section detailed, advanced"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The public Footer renders a branded top section showing the practice name, tagline, and short description.",
+        "The footer includes a multi-column layout with: Quick Links (scroll to Hero, About, Services, Reviews, Clinics, Follow Us), Contact Info column (email, phone, address with appropriate icons), Opening Hours column (displays editable text from backend), and Social Links column (icons linking to Follow Us entries).",
+        "A bottom bar is present with copyright text, a horizontal separator, and a 'Back to Top' button that scrolls to the top of the page.",
+        "The FooterEditor in the admin dashboard exposes fields for: practice name, tagline, short description, copyright text, contact email, contact phone, contact address, and opening hours text block.",
+        "All FooterEditor fields save successfully to the backend when the admin submits.",
+        "The footer renders correctly in both light and dark modes using the existing CSS custom properties.",
+        "The footer uses the glassmorphism card aesthetic (frosted glass panels, blue-purple-magenta palette) and Helvetica font.",
+        "The footer is fully responsive across mobile (≥320px), tablet (≥768px), and desktop (≥1024px) breakpoints.",
+        "The backend DetailedFooter type is extended if necessary to accommodate all new fields (tagline, shortDescription, openingHours, contactEmail, contactPhone, contactAddress)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or frontend/src/components/ui.",
+    "All Motoko logic must remain in backend/main.mo as a single actor.",
+    "Maintain the existing glassmorphism aesthetic, blue-purple-magenta palette, and Helvetica font across all new and modified components.",
+    "Tailwind darkMode must remain set to 'class'."
+  ],
+  "nonGoals": [
+    "Adding hover-to-edit capability to the public-facing website (that is a separate existing feature).",
+    "Changing the admin authentication mechanism.",
+    "Introducing new color schemes or themes beyond those already implemented.",
+    "Adding new backend content sections beyond what is already defined."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

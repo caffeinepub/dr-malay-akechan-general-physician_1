@@ -1,0 +1,82 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-25T05:58:21.779Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 2,
+    "implemented": 2,
+    "items": [
+      {
+        "id": "REQ-26",
+        "summary": "Implement universal hover-to-edit capability directly within the admin panel dashboard pages. When viewing the AdminDashboard (frontend/src/pages/AdminDashboard.tsx) and its editor sub-components, every displayed content field value (text labels, image thumbnails, list item rows) must show an inline pencil/edit icon on hover. Clicking the icon opens an inline input or a small popover/modal to edit that specific field in-place, then saves the change directly to the backend without requiring the admin to navigate to a separate editor form. This must cover all editor panels: HeroEditor, AboutEditor, ServicesEditor, ReviewsEditor, ClinicsEditor, SocialLinksEditor, and FooterEditor. Existing full-form editors must remain available but the hover-to-edit shortcut must also work.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/EditableWrapper.tsx",
+          "frontend/src/components/EditModal.tsx",
+          "frontend/src/components/admin/HeroEditor.tsx",
+          "frontend/src/components/admin/AboutEditor.tsx",
+          "frontend/src/components/admin/ServicesEditor.tsx",
+          "frontend/src/components/admin/ReviewsEditor.tsx",
+          "frontend/src/components/admin/ClinicsEditor.tsx",
+          "frontend/src/components/admin/SocialLinksEditor.tsx",
+          "frontend/src/components/admin/FooterEditor.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/admin/HeroEditor.tsx",
+          "frontend/src/components/admin/AboutEditor.tsx",
+          "frontend/src/components/admin/ServicesEditor.tsx",
+          "frontend/src/components/admin/ReviewsEditor.tsx",
+          "frontend/src/components/admin/ClinicsEditor.tsx",
+          "frontend/src/components/admin/SocialLinksEditor.tsx",
+          "frontend/src/components/admin/FooterEditor.tsx"
+        ]
+      },
+      {
+        "id": "REQ-27",
+        "summary": "Redesign the Footer component (frontend/src/components/Footer.tsx) and FooterEditor (frontend/src/components/admin/FooterEditor.tsx) to be detailed and advanced. The public footer must include: (1) a branded top section with the practice name, tagline, and a short description; (2) a multi-column layout with columns for Quick Links (smooth-scrolling to each page section), Contact Info (email, phone, address with icons), Opening Hours (editable text), and a Social Links column rendering platform icons linking to the Follow Us social entries; (3) a bottom bar with copyright text, a separator, and a 'Back to Top' button. The FooterEditor in the admin dashboard must expose editable fields for all footer content including practice name, tagline, short description, copyright text, contact email, phone, address, and an opening hours text block. All fields must save to the backend. The footer must use the existing glassmorphism card aesthetic, blue-purple-magenta palette, dark/light mode CSS custom properties, and Helvetica font.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Footer.tsx",
+          "frontend/src/components/admin/FooterEditor.tsx",
+          "frontend/src/pages/Home.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Footer.tsx",
+          "frontend/src/components/admin/FooterEditor.tsx",
+          "frontend/src/pages/Home.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/InlineEditable.tsx",
+    "frontend/src/components/admin/AboutEditor.tsx",
+    "frontend/src/components/admin/ClinicsEditor.tsx",
+    "frontend/src/components/admin/FooterEditor.tsx",
+    "frontend/src/components/admin/HeroEditor.tsx",
+    "frontend/src/components/admin/ReviewsEditor.tsx",
+    "frontend/src/components/admin/ServicesEditor.tsx",
+    "frontend/src/components/admin/SocialLinksEditor.tsx",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/pages/Home.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

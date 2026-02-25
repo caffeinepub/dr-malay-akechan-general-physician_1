@@ -1,0 +1,317 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── OKLCH Design Tokens ── */
+:root {
+  --background: oklch(0.98 0.005 240);
+  --foreground: oklch(0.15 0.02 240);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0.02 240);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0.02 240);
+  --primary: oklch(0.55 0.22 260);
+  --primary-foreground: oklch(0.98 0.005 240);
+  --secondary: oklch(0.94 0.02 260);
+  --secondary-foreground: oklch(0.25 0.05 260);
+  --muted: oklch(0.94 0.01 240);
+  --muted-foreground: oklch(0.55 0.02 240);
+  --accent: oklch(0.92 0.04 300);
+  --accent-foreground: oklch(0.25 0.08 300);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.98 0.005 240);
+  --border: oklch(0.88 0.01 240);
+  --input: oklch(0.88 0.01 240);
+  --ring: oklch(0.55 0.22 260);
+  --radius: 0.75rem;
+
+  /* Section-specific tokens */
+  --hero-bg-from: oklch(0.18 0.06 260);
+  --hero-bg-to: oklch(0.12 0.08 290);
+  --section-light-bg: oklch(0.97 0.008 240);
+  --section-alt-bg: oklch(0.94 0.012 260);
+  --glass-bg: oklch(1 0 0 / 0.08);
+  --glass-border: oklch(1 0 0 / 0.15);
+  --glass-shadow: 0 8px 32px oklch(0.3 0.1 260 / 0.15);
+}
+
+.dark {
+  --background: oklch(0.12 0.02 260);
+  --foreground: oklch(0.95 0.01 240);
+  --card: oklch(0.18 0.03 260);
+  --card-foreground: oklch(0.95 0.01 240);
+  --popover: oklch(0.18 0.03 260);
+  --popover-foreground: oklch(0.95 0.01 240);
+  --primary: oklch(0.65 0.22 260);
+  --primary-foreground: oklch(0.12 0.02 260);
+  --secondary: oklch(0.25 0.04 260);
+  --secondary-foreground: oklch(0.90 0.02 260);
+  --muted: oklch(0.22 0.03 260);
+  --muted-foreground: oklch(0.65 0.03 260);
+  --accent: oklch(0.28 0.06 300);
+  --accent-foreground: oklch(0.90 0.04 300);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.98 0.005 240);
+  --border: oklch(0.28 0.04 260);
+  --input: oklch(0.28 0.04 260);
+  --ring: oklch(0.65 0.22 260);
+
+  --section-light-bg: oklch(0.14 0.025 260);
+  --section-alt-bg: oklch(0.16 0.03 280);
+  --glass-bg: oklch(1 0 0 / 0.05);
+  --glass-border: oklch(1 0 0 / 0.10);
+  --glass-shadow: 0 8px 32px oklch(0.1 0.05 260 / 0.4);
+}
+
+/* ── Base ── */
+* { box-sizing: border-box; }
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Hero Section ── */
+.hero-section-bg {
+  background: linear-gradient(135deg,
+    oklch(0.18 0.06 260) 0%,
+    oklch(0.14 0.08 280) 40%,
+    oklch(0.12 0.10 300) 100%);
+  min-height: 100vh;
+}
+.dark .hero-section-bg {
+  background: linear-gradient(135deg,
+    oklch(0.12 0.06 260) 0%,
+    oklch(0.10 0.08 280) 40%,
+    oklch(0.08 0.10 300) 100%);
+}
+.hero-card {
+  background: oklch(1 0 0 / 0.06);
+  border: 1px solid oklch(1 0 0 / 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.hero-heading {
+  color: oklch(0.97 0.01 240);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.hero-subheading {
+  color: oklch(0.85 0.04 260);
+}
+.hero-tagline {
+  color: oklch(0.75 0.12 290);
+}
+.hero-cta-primary {
+  background: linear-gradient(135deg, oklch(0.55 0.22 260), oklch(0.55 0.22 300));
+  color: oklch(0.98 0.005 240);
+  border: none;
+}
+.hero-cta-secondary {
+  background: oklch(1 0 0 / 0.08);
+  border: 1px solid oklch(1 0 0 / 0.20);
+  color: oklch(0.90 0.02 240);
+}
+
+/* ── About Section ── */
+.section-about-bg {
+  background: var(--section-light-bg);
+}
+.dark .section-about-bg {
+  background: oklch(0.14 0.025 260);
+}
+
+/* ── Services Section ── */
+.section-services-bg {
+  background: var(--section-alt-bg);
+}
+.dark .section-services-bg {
+  background: oklch(0.13 0.03 275);
+}
+
+/* ── Reviews Section ── */
+.section-reviews-bg {
+  background: var(--section-light-bg);
+}
+.dark .section-reviews-bg {
+  background: oklch(0.14 0.025 260);
+}
+
+/* ── Clinics Section ── */
+.section-clinics-bg {
+  background: var(--section-alt-bg);
+}
+.dark .section-clinics-bg {
+  background: oklch(0.13 0.03 275);
+}
+
+/* ── Follow Us Section ── */
+.section-follow-bg {
+  background: linear-gradient(135deg,
+    oklch(0.18 0.06 260) 0%,
+    oklch(0.14 0.08 290) 100%);
+}
+.dark .section-follow-bg {
+  background: linear-gradient(135deg,
+    oklch(0.12 0.06 260) 0%,
+    oklch(0.10 0.08 290) 100%);
+}
+
+/* ── Shared Glass Card ── */
+.section-glass-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--glass-shadow);
+}
+.dark .section-glass-card {
+  background: oklch(1 0 0 / 0.04);
+  border-color: oklch(1 0 0 / 0.08);
+}
+
+/* ── Typography helpers ── */
+.section-heading {
+  color: var(--foreground);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.dark .section-heading {
+  color: oklch(0.95 0.01 240);
+}
+.section-body-text {
+  color: var(--muted-foreground);
+}
+.dark .section-body-text {
+  color: oklch(0.72 0.03 260);
+}
+.section-divider-border {
+  border-color: var(--border);
+}
+.dark .section-divider-border {
+  border-color: oklch(0.28 0.04 260);
+}
+
+/* ══════════════════════════════════════════
+   FOOTER — Advanced Multi-column Design
+   ══════════════════════════════════════════ */
+.footer-bg {
+  background: linear-gradient(160deg,
+    oklch(0.13 0.04 260) 0%,
+    oklch(0.10 0.06 280) 50%,
+    oklch(0.09 0.07 300) 100%);
+  border-top: 1px solid oklch(1 0 0 / 0.08);
+}
+.dark .footer-bg {
+  background: linear-gradient(160deg,
+    oklch(0.09 0.04 260) 0%,
+    oklch(0.07 0.06 280) 50%,
+    oklch(0.06 0.07 300) 100%);
+  border-top-color: oklch(1 0 0 / 0.06);
+}
+
+.footer-heading {
+  color: oklch(0.96 0.01 240);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.footer-tagline {
+  color: oklch(0.75 0.14 290);
+}
+.footer-description {
+  color: oklch(0.72 0.04 260);
+}
+.footer-col-heading {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: oklch(0.65 0.18 270);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+.footer-col-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1.5rem;
+  height: 2px;
+  background: linear-gradient(90deg, oklch(0.60 0.22 260), oklch(0.65 0.22 300));
+  border-radius: 9999px;
+}
+.footer-link {
+  color: oklch(0.72 0.04 260);
+  transition: color 0.2s;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+.footer-link:hover {
+  color: oklch(0.85 0.14 290);
+}
+.footer-body {
+  color: oklch(0.72 0.04 260);
+}
+.footer-muted {
+  color: oklch(0.55 0.04 260);
+}
+.footer-divider {
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent,
+    oklch(1 0 0 / 0.12) 20%,
+    oklch(1 0 0 / 0.12) 80%,
+    transparent);
+}
+.footer-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.625rem;
+  background: oklch(1 0 0 / 0.07);
+  border: 1px solid oklch(1 0 0 / 0.12);
+  color: oklch(0.75 0.08 270);
+  transition: all 0.2s;
+}
+.footer-social-btn:hover {
+  background: linear-gradient(135deg, oklch(0.55 0.22 260), oklch(0.60 0.22 300));
+  border-color: transparent;
+  color: oklch(0.98 0.005 240);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px oklch(0.55 0.22 280 / 0.4);
+}
+.footer-newsletter-card {
+  background: oklch(1 0 0 / 0.05);
+  border: 1px solid oklch(1 0 0 / 0.10);
+}
+.footer-newsletter-text {
+  color: oklch(0.80 0.10 270);
+}
+.footer-back-to-top {
+  color: oklch(0.72 0.08 270);
+  background: oklch(1 0 0 / 0.06);
+  border: 1px solid oklch(1 0 0 / 0.12);
+  padding: 0.375rem 0.875rem;
+  border-radius: 9999px;
+  transition: all 0.2s;
+}
+.footer-back-to-top:hover {
+  background: linear-gradient(135deg, oklch(0.55 0.22 260), oklch(0.60 0.22 300));
+  border-color: transparent;
+  color: oklch(0.98 0.005 240);
+  box-shadow: 0 4px 12px oklch(0.55 0.22 280 / 0.3);
+}
+
+/* Light mode footer overrides */
+:root:not(.dark) .footer-bg {
+  background: linear-gradient(160deg,
+    oklch(0.20 0.04 260) 0%,
+    oklch(0.16 0.06 280) 50%,
+    oklch(0.14 0.07 300) 100%);
+}

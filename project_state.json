@@ -1,0 +1,292 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 15,
+  "summary": "Professional website for Dr. Malay Akechan (General Physician) with sections: Hero/Overview, About, Services, Patient Reviews, Our Clinics, Follow Us, and Footer. Features sophisticated high-tech glassmorphism UI with blue-purple-magenta color palette, Helvetica font used universally across the entire website, subtle hover effects, light/dark toggle, full responsiveness, admin panel with simple username/password login (malay/duke46), universal hover-to-edit capability, and backend image store with add/delete functionality. All sections start empty until admin adds content.",
+  "architectural_notes": [
+    "Admin login uses hardcoded credentials (malay/duke46) checked client/server-side — no external identity provider",
+    "All public sections render empty until admin populates content via the admin panel",
+    "Images stored in a backend image store; admin can add or delete images per section",
+    "UI theme uses glassmorphism (frosted glass cards, backdrop-filter blur), blue-purple-magenta palette, formal serif/sans-serif typography, and subtle hover transitions"
+  ],
+  "known_issues": [
+    "Light/dark mode toggle is not working — switching between modes has no effect"
+  ],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-build-the-public-facing-website-in-react-with-the-following-sections-rendered-as-full-page-scrollable-sections-in-order-1-hero-overview-2-about-3-services-4-patient-reviews-5-our-clinics-6-follow-us-7-footer-each-section-renders-its-content-fetched-from-the-backend-or-renders-nothing-a-minimal-placeholder-if-the-section-has-no-content-yet",
+      "title": "Build the public-facing website in React with the following sections rendered as full-page scrollable sections in order: (1) Hero/Overview, (2) About, (3) Services, (4) Patient Reviews, (5) Our Clinics, (6) Follow Us, (7) Footer. Each section renders its content fetched from the backend, or renders nothing / a minimal placeholder if the section has no content yet.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-an-elegant-modern-super-professional-multi-color-material-design-visual-theme-across-the-entire-website-use-a-rich-palette-with-distinct-accent-colors-per-section-e-g-deep-teal-royal-indigo-warm-amber-confident-crimson-use-material-design-inspired-elevation-cards-with-shadows-bold-typography-e-g-roboto-or-similar-sans-serif-smooth-transitions-and-generous-whitespace-enforce-the-theme-consistently-across-all-components-and-both-light-and-dark-modes",
+      "title": "Apply an elegant, modern, super-professional multi-color Material Design visual theme across the entire website. Use a rich palette with distinct accent colors per section (e.g., deep teal, royal indigo, warm amber, confident crimson). Use Material Design–inspired elevation (cards with shadows), bold typography (e.g., Roboto or similar sans-serif), smooth transitions, and generous whitespace. Enforce the theme consistently across all components and both light and dark modes.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-light-dark-mode-toggle-button-accessible-from-the-navigation-bar-persist-the-user-s-preference-in-localstorage-all-components-must-correctly-adapt-their-colors-backgrounds-and-text-contrast-in-both-modes",
+      "title": "Add a light/dark mode toggle button (accessible from the navigation bar). Persist the user's preference in localStorage. All components must correctly adapt their colors, backgrounds, and text contrast in both modes.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-entire-website-is-fully-responsive-across-mobile-320px-tablet-768px-and-desktop-1024px-breakpoints-use-tailwind-css-responsive-utilities-navigation-should-collapse-into-a-hamburger-menu-on-mobile",
+      "title": "Ensure the entire website is fully responsive across mobile (≥320px), tablet (≥768px), and desktop (≥1024px) breakpoints. Use Tailwind CSS responsive utilities. Navigation should collapse into a hamburger menu on mobile.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-dedicated-admin-section-at-route-admin-it-must-have-its-own-login-page-with-username-and-password-fields-on-successful-login-malay-duke46-validated-via-backend-the-admin-is-granted-a-session-token-stored-in-sessionstorage-and-redirected-to-the-admin-dashboard-the-dashboard-must-allow-full-crud-for-every-content-section-hero-about-services-patient-reviews-our-clinics-follow-us-and-footer-it-must-also-include-an-image-manager-panel-where-the-admin-can-upload-images-selecting-them-from-disk-view-all-stored-images-with-thumbnails-and-delete-any-image",
+      "title": "Create a dedicated Admin section at route /admin. It must have its own login page with username and password fields. On successful login (malay / duke46 validated via backend), the admin is granted a session token stored in sessionStorage and redirected to the admin dashboard. The dashboard must allow full CRUD for every content section: Hero, About, Services, Patient Reviews, Our Clinics, Follow Us, and Footer. It must also include an Image Manager panel where the admin can upload images (selecting them from disk), view all stored images with thumbnails, and delete any image.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-universal-hover-to-edit-capability-when-an-admin-is-logged-in-session-token-present-and-visits-the-public-facing-website-hovering-over-any-editable-content-block-text-image-card-should-reveal-an-inline-edit-icon-overlay-clicking-it-opens-a-quick-edit-modal-or-inline-input-to-update-that-specific-field-which-saves-directly-to-the-backend",
+      "title": "Implement universal hover-to-edit capability: when an admin is logged in (session token present) and visits the public-facing website, hovering over any editable content block (text, image, card) should reveal an inline edit icon/overlay. Clicking it opens a quick-edit modal or inline input to update that specific field, which saves directly to the backend.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-the-browser-tab-title-must-be-set-to-dr-malay-akechan-general-physician",
+      "title": "The browser tab title must be set to 'Dr. Malay Akechan - General Physician'.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-use-a-professional-hero-background-image-and-a-doctor-profile-placeholder-image-as-default-static-assets-for-the-website-stored-under-frontend-public-assets-generated",
+      "title": "Generate and use a professional hero background image and a doctor profile placeholder image as default static assets for the website, stored under frontend/public/assets/generated.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-global-color-system-and-css-custom-properties-to-use-a-cohesive-blue-purple-magenta-palette-define-primary-secondary-and-accent-tokens-using-deep-blue-1a1aff-range-royal-purple-7c3aed-range-and-vivid-magenta-d946ef-range-as-the-core-hues-apply-these-consistently-across-light-and-dark-mode-themes-in-frontend-src-index-css-and-frontend-tailwind-config-js",
+      "title": "Redesign the global color system and CSS custom properties to use a cohesive blue-purple-magenta palette. Define primary, secondary, and accent tokens using deep blue (#1a1aff range), royal purple (#7c3aed range), and vivid magenta (#d946ef range) as the core hues. Apply these consistently across light and dark mode themes in frontend/src/index.css and frontend/tailwind.config.js.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-material-design-typography-with-a-plain-formal-serif-sans-serif-pairing-use-playfair-display-or-equivalent-formal-serif-for-headings-and-inter-or-equivalent-clean-sans-serif-for-body-text-apply-font-family-tokens-consistently-in-the-global-stylesheet-and-all-section-components",
+      "title": "Replace the current Material Design typography with a plain, formal serif/sans-serif pairing. Use Playfair Display (or equivalent formal serif) for headings and Inter (or equivalent clean sans-serif) for body text. Apply font-family tokens consistently in the global stylesheet and all section components.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-full-glassmorphism-card-and-panel-aesthetic-across-all-public-facing-section-components-herosection-aboutsection-servicessection-patientreviewssection-clinicssection-followussection-footer-navbar-cards-must-use-frosted-glass-styling-semi-transparent-backgrounds-backdrop-filter-blur-background-with-low-opacity-a-subtle-1px-border-using-a-white-blue-tinted-rgba-color-and-soft-drop-shadows-in-the-blue-purple-range-this-must-look-correct-in-both-light-and-dark-modes",
+      "title": "Implement a full glassmorphism card and panel aesthetic across all public-facing section components (HeroSection, AboutSection, ServicesSection, PatientReviewsSection, ClinicsSection, FollowUsSection, Footer, Navbar). Cards must use frosted glass styling: semi-transparent backgrounds (backdrop-filter: blur + background with low opacity), a subtle 1px border using a white/blue-tinted rgba color, and soft drop shadows in the blue-purple range. This must look correct in both light and dark modes.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-polished-subtle-hover-effects-to-all-interactive-elements-across-the-public-facing-website-service-cards-review-cards-clinic-cards-social-link-cards-and-navigation-links-effects-must-include-a-gentle-upward-translate-translatey-4px-a-slight-glow-or-border-brightening-using-the-blue-purple-magenta-palette-and-a-smooth-transition-200-300ms-ease-avoid-heavy-or-jarring-animations",
+      "title": "Add polished, subtle hover effects to all interactive elements across the public-facing website: service cards, review cards, clinic cards, social link cards, and navigation links. Effects must include a gentle upward translate (translateY(-4px)), a slight glow or border brightening using the blue-purple-magenta palette, and a smooth transition (200–300ms ease). Avoid heavy or jarring animations.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-navbar-component-to-match-the-new-high-tech-glassmorphism-aesthetic-frosted-glass-background-on-scroll-blue-purple-gradient-logo-brand-text-magenta-accent-for-the-active-section-indicator-formal-font-for-nav-links-and-a-refined-light-dark-mode-toggle-button-styled-with-the-new-palette",
+      "title": "Redesign the Navbar component to match the new high-tech glassmorphism aesthetic: frosted glass background on scroll, blue-purple gradient logo/brand text, magenta accent for the active section indicator, formal font for nav links, and a refined light/dark mode toggle button styled with the new palette.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-sophisticated-section-background-treatment-to-all-public-facing-page-sections-use-deep-blue-to-purple-gradient-backgrounds-varying-slightly-per-section-or-a-dark-near-black-base-with-subtle-radial-mesh-gradients-in-the-blue-purple-range-sections-must-not-look-flat-use-layered-gradients-or-subtle-background-patterns-to-add-depth-without-clashing-with-the-glassmorphism-cards-on-top",
+      "title": "Apply a sophisticated section background treatment to all public-facing page sections: use deep blue-to-purple gradient backgrounds (varying slightly per section) or a dark near-black base with subtle radial/mesh gradients in the blue-purple range. Sections must not look flat; use layered gradients or subtle background patterns to add depth without clashing with the glassmorphism cards on top.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-admin-login-page-and-admin-dashboard-to-match-the-new-glassmorphism-aesthetic-frosted-glass-login-card-blue-purple-gradient-accents-formal-font-headings-magenta-primary-action-buttons-and-consistent-glassmorphism-panel-styling-for-all-dashboard-tab-panels-and-editor-forms",
+      "title": "Redesign the Admin Login page and Admin Dashboard to match the new glassmorphism aesthetic: frosted glass login card, blue-purple gradient accents, formal font headings, magenta primary action buttons, and consistent glassmorphism panel styling for all dashboard tab panels and editor forms.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-all-existing-font-references-playfair-display-inter-and-any-other-fonts-with-helvetica-as-the-universal-typeface-across-the-entire-website-all-headings-body-text-navigation-links-buttons-admin-panel-dashboard-editors-and-any-other-text-bearing-element-in-frontend-index-html-remove-the-google-fonts-import-for-playfair-display-and-inter-in-frontend-tailwind-config-js-update-the-fontfamily-configuration-so-that-the-sans-and-serif-stacks-both-resolve-to-helvetica-helvetica-neue-arial-sans-serif-standard-helvetica-stack-with-fallbacks-in-frontend-src-index-css-update-all-css-custom-property-font-family-declarations-to-use-the-helvetica-stack-remove-any-per-component-font-family-overrides-that-reference-playfair-display-or-inter-in-all-section-components-herosection-aboutsection-servicessection-patientreviewssection-clinicssection-followussection-footer-navbar-and-all-admin-components-adminlogin-admindashboard-all-editor-components-the-helvetica-stack-must-be-the-sole-typeface-used-site-wide-in-both-light-and-dark-modes",
+      "title": "Replace all existing font references (Playfair Display, Inter, and any other fonts) with Helvetica as the universal typeface across the entire website — all headings, body text, navigation links, buttons, admin panel, dashboard, editors, and any other text-bearing element. In frontend/index.html, remove the Google Fonts import for Playfair Display and Inter. In frontend/tailwind.config.js, update the fontFamily configuration so that the sans and serif stacks both resolve to Helvetica, Helvetica Neue, Arial, sans-serif (standard Helvetica stack with fallbacks). In frontend/src/index.css, update all CSS custom property font-family declarations to use the Helvetica stack. Remove any per-component font-family overrides that reference Playfair Display or Inter in all section components (HeroSection, AboutSection, ServicesSection, PatientReviewsSection, ClinicsSection, FollowUsSection, Footer, Navbar) and all admin components (AdminLogin, AdminDashboard, all editor components). The Helvetica stack must be the sole typeface used site-wide in both light and dark modes.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-light-dark-mode-toggle-so-that-switching-between-light-and-dark-modes-has-a-visible-effect-across-the-entire-website-the-themeprovider-in-app-tsx-must-correctly-apply-and-remove-the-dark-class-on-the-document-root-element-or-equivalent-mechanism-when-the-toggle-is-activated-the-toggle-state-must-be-persisted-in-localstorage-and-restored-on-page-load-all-components-navbar-herosection-aboutsection-servicessection-patientreviewssection-clinicssection-followussection-footer-adminlogin-admindashboard-and-all-admin-editor-components-must-visually-respond-to-the-active-theme-backgrounds-text-colors-glassmorphism-panel-styles-and-gradients-must-differ-meaningfully-between-light-and-dark-modes-using-the-existing-css-custom-properties-defined-in-frontend-src-index-css",
+      "title": "Fix the light/dark mode toggle so that switching between light and dark modes has a visible effect across the entire website. The ThemeProvider in App.tsx must correctly apply and remove the 'dark' class on the document root element (or equivalent mechanism) when the toggle is activated. The toggle state must be persisted in localStorage and restored on page load. All components (Navbar, HeroSection, AboutSection, ServicesSection, PatientReviewsSection, ClinicsSection, FollowUsSection, Footer, AdminLogin, AdminDashboard, and all admin editor components) must visually respond to the active theme — backgrounds, text colors, glassmorphism panel styles, and gradients must differ meaningfully between light and dark modes using the existing CSS custom properties defined in frontend/src/index.css.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-light-dark-mode-toggle-so-that-switching-modes-produces-a-visible-immediate-effect-across-the-entire-website-the-root-cause-must-be-diagnosed-and-resolved-specifically-1-in-app-tsx-replace-the-next-themes-themeprovider-with-a-custom-theme-context-that-directly-adds-removes-the-dark-class-on-document-documentelement-when-the-toggle-is-clicked-2-read-the-initial-theme-from-localstorage-on-page-load-and-apply-it-before-first-render-to-avoid-a-flash-3-persist-every-theme-change-to-localstorage-under-the-key-theme-4-expose-the-current-theme-value-and-a-toggletheme-function-via-a-themecontext-so-any-component-can-consume-it-5-the-navbar-toggle-button-must-call-toggletheme-and-reflect-the-current-mode-with-the-correct-icon-sun-moon-6-in-frontend-src-index-css-ensure-that-all-dark-mode-css-custom-property-overrides-are-scoped-under-the-dark-selector-on-root-or-html-not-under-a-media-query-so-they-activate-when-the-class-is-present-7-in-frontend-tailwind-config-js-confirm-darkmode-is-set-to-class-all-components-navbar-herosection-aboutsection-servicessection-patientreviewssection-clinicssection-followussection-footer-adminlogin-admindashboard-and-all-admin-editor-components-must-use-tailwind-dark-variant-classes-and-or-css-custom-properties-that-respond-to-the-dark-class-so-backgrounds-text-colors-glassmorphism-panel-styles-and-gradients-differ-meaningfully-between-light-and-dark-modes",
+      "title": "Fix the light/dark mode toggle so that switching modes produces a visible, immediate effect across the entire website. The root cause must be diagnosed and resolved. Specifically: (1) In App.tsx, replace the next-themes ThemeProvider with a custom theme context that directly adds/removes the 'dark' class on document.documentElement when the toggle is clicked. (2) Read the initial theme from localStorage on page load and apply it before first render to avoid a flash. (3) Persist every theme change to localStorage under the key 'theme'. (4) Expose the current theme value and a toggleTheme function via a ThemeContext so any component can consume it. (5) The Navbar toggle button must call toggleTheme and reflect the current mode with the correct icon (sun/moon). (6) In frontend/src/index.css, ensure that all dark-mode CSS custom property overrides are scoped under the '.dark' selector on :root (or html) — not under a media query — so they activate when the class is present. (7) In frontend/tailwind.config.js, confirm darkMode is set to 'class'. All components (Navbar, HeroSection, AboutSection, ServicesSection, PatientReviewsSection, ClinicsSection, FollowUsSection, Footer, AdminLogin, AdminDashboard, and all admin editor components) must use Tailwind dark: variant classes and/or CSS custom properties that respond to the .dark class, so backgrounds, text colors, glassmorphism panel styles, and gradients differ meaningfully between light and dark modes.",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-footer-component-frontend-src-components-footer-tsx-and-footereditor-frontend-src-components-admin-footereditor-tsx-to-be-detailed-and-advanced-the-public-footer-must-include-1-a-branded-top-section-with-the-practice-name-tagline-and-a-short-description-2-a-multi-column-layout-with-columns-for-quick-links-scrolling-to-each-page-section-contact-info-email-phone-address-with-icons-opening-hours-static-or-editable-text-and-a-social-links-column-rendering-icons-linking-to-the-follow-us-social-entries-3-a-bottom-bar-with-copyright-text-a-separator-and-a-back-to-top-button-the-footereditor-in-the-admin-dashboard-must-expose-editable-fields-for-all-footer-content-including-practice-name-tagline-short-description-copyright-text-contact-email-phone-address-and-an-opening-hours-text-block-all-fields-must-save-to-the-backend-the-footer-must-use-the-existing-glassmorphism-card-aesthetic-blue-purple-magenta-palette-dark-light-mode-css-custom-properties-and-helvetica-font",
+      "title": "Redesign the Footer component (frontend/src/components/Footer.tsx) and FooterEditor (frontend/src/components/admin/FooterEditor.tsx) to be detailed and advanced. The public footer must include: (1) a branded top section with the practice name, tagline, and a short description; (2) a multi-column layout with columns for Quick Links (scrolling to each page section), Contact Info (email, phone, address with icons), Opening Hours (static or editable text), and a Social Links column rendering icons linking to the Follow Us social entries; (3) a bottom bar with copyright text, a separator, and a 'Back to Top' button. The FooterEditor in the admin dashboard must expose editable fields for all footer content including practice name, tagline, short description, copyright text, contact email, phone, address, and an opening hours text block. All fields must save to the backend. The footer must use the existing glassmorphism card aesthetic, blue-purple-magenta palette, dark/light mode CSS custom properties, and Helvetica font.",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-universal-hover-to-edit-capability-directly-within-the-admin-panel-dashboard-pages-when-viewing-the-admindashboard-frontend-src-pages-admindashboard-tsx-and-its-editor-sub-components-every-displayed-content-field-value-text-labels-image-thumbnails-list-item-rows-must-show-an-inline-pencil-edit-icon-on-hover-clicking-the-icon-opens-an-inline-input-or-a-small-popover-modal-to-edit-that-specific-field-in-place-then-saves-the-change-directly-to-the-backend-without-requiring-the-admin-to-navigate-to-a-separate-editor-form-this-must-cover-all-editor-panels-heroeditor-abouteditor-serviceseditor-reviewseditor-clinicseditor-sociallinkseditor-and-footereditor-existing-full-form-editors-must-remain-available-but-the-hover-to-edit-shortcut-must-also-work",
+      "title": "Implement universal hover-to-edit capability directly within the admin panel dashboard pages. When viewing the AdminDashboard (frontend/src/pages/AdminDashboard.tsx) and its editor sub-components, every displayed content field value (text labels, image thumbnails, list item rows) must show an inline pencil/edit icon on hover. Clicking the icon opens an inline input or a small popover/modal to edit that specific field in-place, then saves the change directly to the backend without requiring the admin to navigate to a separate editor form. This must cover all editor panels: HeroEditor, AboutEditor, ServicesEditor, ReviewsEditor, ClinicsEditor, SocialLinksEditor, and FooterEditor. Existing full-form editors must remain available but the hover-to-edit shortcut must also work.",
+      "reqIds": [
+        "REQ-23",
+        "REQ-26"
+      ],
+      "version": 2
+    },
+    {
+      "id": "feature-add-a-ui-theme-switcher-panel-to-the-admindashboard-frontend-src-pages-admindashboard-tsx-this-panel-must-1-appear-as-a-dedicated-themes-tab-section-in-the-admin-sidebar-2-display-at-least-5-named-color-scheme-options-as-visual-swatches-cards-blue-purple-magenta-default-emerald-teal-crimson-rose-amber-gold-midnight-slate-3-each-swatch-must-preview-the-primary-secondary-and-accent-hues-of-that-theme-4-clicking-a-theme-saves-the-selection-to-the-backend-via-setsitetheme-and-immediately-applies-the-theme-to-the-entire-website-both-the-admin-panel-and-the-public-facing-site-by-swapping-css-custom-property-values-on-document-documentelement-5-on-page-load-the-public-facing-site-home-tsx-must-fetch-the-stored-theme-from-the-backend-using-getsitetheme-and-apply-the-corresponding-css-variable-overrides-before-rendering-define-all-theme-palettes-as-a-constant-map-in-a-new-file-frontend-src-utils-themes-ts-each-theme-specifying-values-for-primary-secondary-accent-and-related-css-custom-properties-that-already-exist-in-frontend-src-index-css",
+      "title": "Add a UI Theme Switcher panel to the AdminDashboard (frontend/src/pages/AdminDashboard.tsx). This panel must: (1) appear as a dedicated 'Themes' tab/section in the admin sidebar; (2) display at least 5 named color scheme options as visual swatches/cards — 'Blue Purple Magenta' (default), 'Emerald Teal', 'Crimson Rose', 'Amber Gold', 'Midnight Slate'; (3) each swatch must preview the primary, secondary, and accent hues of that theme; (4) clicking a theme saves the selection to the backend via setSiteTheme and immediately applies the theme to the entire website (both the admin panel and the public-facing site) by swapping CSS custom property values on document.documentElement; (5) on page load the public-facing site (Home.tsx) must fetch the stored theme from the backend using getSiteTheme() and apply the corresponding CSS variable overrides before rendering. Define all theme palettes as a constant map in a new file frontend/src/utils/themes.ts, each theme specifying values for --primary, --secondary, --accent, and related CSS custom properties that already exist in frontend/src/index.css.",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-footer-component-frontend-src-components-footer-tsx-and-footereditor-frontend-src-components-admin-footereditor-tsx-to-be-detailed-and-advanced-the-public-footer-must-include-1-a-branded-top-section-with-the-practice-name-tagline-and-a-short-description-2-a-multi-column-layout-with-columns-for-quick-links-smooth-scrolling-to-each-page-section-contact-info-email-phone-address-with-icons-opening-hours-editable-text-and-a-social-links-column-rendering-platform-icons-linking-to-the-follow-us-social-entries-3-a-bottom-bar-with-copyright-text-a-separator-and-a-back-to-top-button-the-footereditor-in-the-admin-dashboard-must-expose-editable-fields-for-all-footer-content-including-practice-name-tagline-short-description-copyright-text-contact-email-phone-address-and-an-opening-hours-text-block-all-fields-must-save-to-the-backend-the-footer-must-use-the-existing-glassmorphism-card-aesthetic-blue-purple-magenta-palette-dark-light-mode-css-custom-properties-and-helvetica-font",
+      "title": "Redesign the Footer component (frontend/src/components/Footer.tsx) and FooterEditor (frontend/src/components/admin/FooterEditor.tsx) to be detailed and advanced. The public footer must include: (1) a branded top section with the practice name, tagline, and a short description; (2) a multi-column layout with columns for Quick Links (smooth-scrolling to each page section), Contact Info (email, phone, address with icons), Opening Hours (editable text), and a Social Links column rendering platform icons linking to the Follow Us social entries; (3) a bottom bar with copyright text, a separator, and a 'Back to Top' button. The FooterEditor in the admin dashboard must expose editable fields for all footer content including practice name, tagline, short description, copyright text, contact email, phone, address, and an opening hours text block. All fields must save to the backend. The footer must use the existing glassmorphism card aesthetic, blue-purple-magenta palette, dark/light mode CSS custom properties, and Helvetica font.",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Multi-section website layout: Hero, About, Services, Patient Reviews, Our Clinics, Follow Us, Footer",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Fully responsive design across all devices",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Admin panel with simple login (username: malay, password: duke46) and universal access — no external auth",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Universal hover-to-edit capability for all content sections",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Backend image store with add/delete functionality; all sections empty by default until admin adds content",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Create a Motoko backend actor that stores all website content in stable variables. Content model must cover: Hero section (headline, subheadline, tagline, background image ID), About section (bio text, photo image ID), Services (array of {title, description, icon image ID}), Patient Reviews (array of {patientName, reviewText, rating, date}), Our Clinics (array of {name, address, phone, mapLink, photo image ID}), Follow Us (array of {platform, url}), Footer (practice name, copyright text, contact email, phone, address). All sections must default to empty/null until populated by admin.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Implement a backend image store: support uploading image blobs with a unique ID and metadata (filename, mimeType, uploadedAt), retrieving image data by ID, listing all stored images, and deleting images by ID.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Implement simple admin authentication in the backend: a single hardcoded admin account with username 'malay' and password 'duke46'. Provide a login function that accepts username + password and returns a session token (random UUID-style string stored in stable memory). Provide a validateToken function that checks whether a token is valid. No Internet Identity or complex auth.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Redesign UI with sophisticated glassmorphism aesthetic: frosted glass cards, blue-purple-magenta color palette, plain formal font (e.g. Playfair Display or similar), subtle hover effects, consistent high-tech clean look across all sections and both light/dark modes.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Use Helvetica font universally across the entire website (all headings, body text, nav links, admin panel, etc.)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Make the footer section detailed and advanced with rich content layout",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Add universal hover-to-edit capability directly within the admin panel (inline editing on hover for all content fields)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Make admin panel more advanced and add UI theme/color scheme changing ability (allow admin to switch between multiple base color schemes/themes for the website)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Extend the backend Motoko actor (backend/main.mo) to store and serve a siteTheme stable variable that holds the admin's chosen UI color scheme name (e.g., 'blue-purple-magenta', 'emerald-teal', 'crimson-rose', 'amber-gold', 'midnight-slate'). Provide getSiteTheme() and setSiteTheme(token, themeName) functions, where setSiteTheme requires a valid admin session token.",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Dr. Malay Akechan - General Physician",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
